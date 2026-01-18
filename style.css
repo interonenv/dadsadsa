@@ -1,0 +1,320 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Montserrat", sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    width: 100vw;
+    height: 100vh;
+}
+
+.section-heading{ /* Разделяющий заголовок */
+    font-size: 1.5em;
+    font-weight: 500;
+    width: 100vw;
+    padding: 1em 64px;
+    margin-top: 3em;
+    margin-bottom: 2em;
+    background-color: #FFF2DE;
+}
+
+/* ШАПКЕН ВАГЕН */
+
+header{
+    width: 100%;
+    height: 6em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 64px;
+}
+
+.logo-group{
+    display: flex;
+    width: fit-content;
+    height: 100%;
+    align-items: center;
+    gap: 16px;
+}
+
+.logo-group img{
+    height: 4em;
+}
+
+.address{
+    display: flex;
+    align-content: center;
+}
+
+.address img{
+    height: 1.5em;
+}
+
+.navbar{
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.navbar a{
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+
+.navbar a:hover{
+    text-decoration: underline;
+}
+
+.nav-item img{
+    height: 2.5em;
+}
+
+.navbar .btn{
+    border: 1px solid black;
+    border-radius: 8px;
+    padding: 1em 2em;
+    cursor: pointer;
+}
+
+.navbar .btn:hover{
+    background: rgba(159, 159, 159, 0.177);
+}
+
+/*    Обложкэ             */
+
+.cover{
+    width: calc(100% - 128px);
+    height: calc(100vh - 6em - 2em);
+    background: url(images/cover.png);
+    background-size: cover;
+    margin-left: 64px;
+    border-radius: 2em;
+    padding: 64px 7em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.cover h1{
+    font-family: 'Playfair Display SC', serif;
+    font-size: 120px;
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+    line-height: 150px;
+    width: fit-content;
+}
+
+.caption{
+    margin: 0;
+    padding: 0;
+}
+
+.team-caption{
+    text-align: center;
+}
+
+.info{
+    width: 60%;
+    font-size: 1.7em;
+    margin-top: 1em;
+    font-weight: 500;
+}
+
+.cta-btn{
+    background-color: white;
+    border-radius: 8px;
+    padding: 1.2em 3em;
+    width: fit-content;
+    font-size: 1.2em;
+    margin-top: 3em;
+    cursor: pointer;
+}
+
+/*     АТЕКОНОЛОГДЖИЯ      */
+
+.technologies{
+    width: calc(100vw - 128px);
+    margin-left: 64px;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 64px;
+}
+
+.technologies .card{
+    border: 1px solid #763a0b;
+    padding: 1.5em;
+    border-radius: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.technologies .card .content img{
+    width: 100%;
+    border-radius: 1em;
+}
+
+.technologies .card .content h2{
+    font-weight: 600;
+    margin: .5em 0;
+}
+
+.technologies .card .content p{
+    margin: 1em 0;
+}
+
+.btn-learnmore{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #763a0b;
+    cursor: pointer;
+    text-decoration: underline;
+    font-weight: 600;
+}
+
+.btn-learnmore img{
+    width: 1.2em;
+    height: 1em;
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+
+.btn-learnmore:hover{
+    text-decoration: none;
+}
+
+/* Раздел чем мы можем похвастаться :)  */
+
+.advnantages{
+    width: calc(100vw - 128px);
+    margin-left: 64px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    gap: 64px;
+}
+
+.advnantages .card{
+    background-color: #FFF2DE;
+    padding: 1.5em;
+    border-radius: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.advnantages .card img{
+    width: 40%;
+}
+
+.advnantages .card h2{
+    font-weight: 500;
+    margin: .5em 0;
+}
+
+/* Этапы работы над ПРОЭЭЭКТОМ  */
+
+.steps{
+    width: calc(100vw - 256px);
+    margin-left: 128px;
+}
+
+.steps-grid{
+    width: 100%;
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+    "a b c"
+    "d e e";
+    background: black;
+    gap: 1px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.1);
+}
+
+#steps-cell-1 {grid-area: a;}
+#steps-cell-2 {grid-area: b;}
+#steps-cell-3 {grid-area: c;}
+#steps-cell-4 {grid-area: d;}
+#steps-cell-5 {grid-area: e;}
+
+.steps-cell{
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    gap: 1.5em;
+    background: white;
+}
+
+.steps-cell h2{
+    font-weight: 600;
+    font-size: 1.6em;
+}
+
+.steps-cell .steps-price{
+    font-weight: 400;
+    font-size: 1.8em;
+}
+
+.steps-learnmore{
+    position: absolute;
+    bottom: 1.5em;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.steps-learnmore img{
+    width: .9em;
+}
+
+/* FOOTER PODVAL VAL KARNA.VAL */
+
+footer{
+    width: 100%;
+    background-color: #FFF2DE;
+    padding: 64px;
+    margin-top: 6em;
+    display: flex;
+    justify-content: space-between;
+}
+
+footer .navbar img{
+    width: 6em;
+}
+
+.contacts{
+    display: flex;
+    /*align-items: center;*/
+    flex-direction: column;
+    gap: 1em;
+}
+
+.contact{
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+
+.contact img{
+    width: 1.5em;
+}
+
+.email{
+    text-decoration: underline;
+}
